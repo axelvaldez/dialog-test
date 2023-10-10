@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iframed 1</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <p>This content lives inside an iframe</p>
+
+    <dialog>
+      <button autofocus>Close</button>
+      <h3>This dialog lives in an iframed page</h3>
+    </dialog>
+    <button>Show Local Modal</button>
+
+    <script>
+      const dialog = document.querySelector("dialog");
+      const showButton = document.querySelector("dialog + button");
+      const closeButton = document.querySelector("dialog button");
+
+      // "Show the dialog" button opens the dialog modally
+      showButton.addEventListener("click", () => {
+        dialog.showModal();
+      });
+
+      // "Close" button closes the dialog
+      closeButton.addEventListener("click", () => {
+        dialog.close();
+      });
+    </script>
+  </body>
+</html>

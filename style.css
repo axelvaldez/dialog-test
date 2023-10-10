@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 50px;
+  min-height: 100vh;
+  place-content: center;
+}
+
+.iframes {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+
+  & iframe {
+    height: 40vh;
+    border: 5px solid;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+dialog {
+  max-width: 600px;
+
+  &::backdrop {
+    background: rgba(255, 0, 0, 0.5);
+  }
+}
+
+body > button {
+  padding: 1rem 2rem;
+  background: red;
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+iframe {
+  width: 100vw;
+  height: 50vh;
+  border: 5px solid;
+}

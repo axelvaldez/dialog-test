@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iframed 2</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <p>This content is in another iframe</p>
+    <button>Show Parent Modal</button>
+    <script>
+      parentDialog = parent.document.querySelector("dialog");
+      document.querySelector("button").addEventListener("click", () => {
+        parentDialog.showModal();
+      });
+    </script>
+  </body>
+</html>

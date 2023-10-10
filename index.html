@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog Test</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>Dialog Test</h1>
+    <p>This content lives in the parent page.</p>
+
+    <dialog>
+      <button autofocus>Close</button>
+      <h1>This dialog lives in the parent page.</h1>
+    </dialog>
+    <button>Show Local Modal</button>
+
+    <div class="iframes">
+      <iframe src="/iframed-1.html" frameborder="0"></iframe>
+      <iframe src="/iframed-2.html" frameborder="0"></iframe>
+    </div>
+
+    <script>
+      const dialog = document.querySelector("dialog");
+      const showButton = document.querySelector("dialog + button");
+      const closeButton = document.querySelector("dialog button");
+
+      // "Show the dialog" button opens the dialog modally
+      showButton.addEventListener("click", () => {
+        dialog.showModal();
+      });
+
+      // "Close" button closes the dialog
+      closeButton.addEventListener("click", () => {
+        dialog.close();
+      });
+    </script>
+  </body>
+</html>
